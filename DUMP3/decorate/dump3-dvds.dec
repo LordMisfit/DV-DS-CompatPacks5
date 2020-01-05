@@ -185,6 +185,8 @@ actor Benellus1DS : AetheriusMonsterZSC replaces Benellus1
 	+NOICEDEATH
 	+NOPAIN
 	RadiusDamageFactor 0.25
+	DamageFactor "Explosive", 0.25
+
 	BloodColor "Red"
 	Species "Monster"
 	Obituary "%o knelt to Benellus, the God of Shotguns."
@@ -430,6 +432,7 @@ actor Benellus2DS : AetheriusMonsterZSC replaces Benellus2
 	+NOICEDEATH
 	+NOPAIN
 	RadiusDamageFactor 0.25
+	DamageFactor "Explosive", 0.25
 	BloodColor "Red"
 	Species "Monster"
 	Obituary "%o knelt before Benellus, the God of Shotguns."
@@ -512,6 +515,7 @@ actor Benellus3DS : AetheriusMonsterZSC replaces Benellus3
 	+NOICEDEATH
 	+NOPAIN
 	RadiusDamageFactor 0.25
+	DamageFactor "Explosive", 0.25
 	BloodColor "Red"
 	Species "Monster"
 	Obituary "%o knelt before Benellus, the God of Shotguns."
