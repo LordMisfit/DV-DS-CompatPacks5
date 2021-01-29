@@ -83,10 +83,10 @@ ACTOR AdolfHitlerDS : AetheriusMonsterZSC replaces AdolfHitler
 				}
 
 				user_shotsfired += 1;
-				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "EndMissile")) { return state("EndMissile"); }
+				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "MissileEnd")) { return state("MissileEnd"); }
 				return state("");
 			}
-			HTLR F 0 Bright A_MonsterRefire(10,"EndMissile")
+			HTLR F 0 Bright A_MonsterRefire(10,"MissileEnd")
 			HTLR G 4 Bright
 			{
 				if (levelbehavior && user_monsterlevel > 180) { A_SetTics(2); }
@@ -108,13 +108,13 @@ ACTOR AdolfHitlerDS : AetheriusMonsterZSC replaces AdolfHitler
 				}
 	
 				user_shotsfired += 1;
-				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "EndMissile")) { return state("EndMissile"); }
+				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "MissileEnd")) { return state("MissileEnd"); }
 				return state("");
 			}
-			HTLR G 1 Bright A_MonsterRefire(10,"EndMissile")
+			HTLR G 1 Bright A_MonsterRefire(10,"MissileEnd")
 			goto Attack
 
-		EndMissile:
+		MissileEnd:
 			TNT1 A 0 
 			{
 				user_shotsfired = 0;
@@ -368,7 +368,7 @@ actor Benellus1DS : AetheriusMonsterZSC replaces Benellus1
 			{
 				A_PlaySound("benellus/pump1",7);
 				user_shotsfired += 1;
-				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "EndMissile")) { return state("EndMissile"); }
+				If (A_JumpIf(user_shotsfired > user_shotsfiredmax, "MissileEnd")) { return state("MissileEnd"); }
 				return state("");
 			}
 			BENE ABCD 3
@@ -378,7 +378,7 @@ actor Benellus1DS : AetheriusMonsterZSC replaces Benellus1
 			}
 			goto Missile1
 
-		EndMissile:
+		MissileEnd:
 			TNT1 A 0
 			{
 				user_shotsfired = 0;
