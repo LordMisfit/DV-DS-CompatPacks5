@@ -101,7 +101,7 @@ actor StrangeAlien : DSWolfensteinSS replaces DSWolfensteinSS
 		Pain:
 			SSWV H 3
 			SSWV H 3 A_PlaySound("nazi/pain")
-			Goto See	
+			Goto See
 		Pain.Fist:
 			SSWV H 3
 			SSWV H 3 A_PlaySound("nazi/pain")
